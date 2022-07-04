@@ -1,12 +1,9 @@
 <?php
-	$conn = mysqli_connect(
-  		'localhost', 
-  		'root',
-		'9891',
-  		'test_2');
-
+	require_once("연동.php")
+?>
+<?php
 		  $sql = "SELECT * 
-		  FROM test_2.flower_db
+		  FROM flower.flower_db
 		  WHERE 꽃말 LIKE '%사랑%' OR
 			꽃말 LIKE '%관심%' OR
 			꽃말 LIKE '%축복%' OR
@@ -31,7 +28,7 @@
 		<title>상황별 - 결혼식</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main2.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
 

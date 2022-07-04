@@ -1,12 +1,9 @@
 <?php
-	$conn = mysqli_connect(
-  		'localhost', 
-  		'root',
-		'9891',
-  		'test_2');
-
+	require_once("연동.php")
+?>
+<?php
 		  $sql = "SELECT * 
-		  FROM test_2.flower_db
+		  FROM flower.flower_db
 		  WHERE 꽃말 LIKE '%도전%' OR
 	 	  	꽃말 LIKE '%환호%' OR
 			꽃말 LIKE '%독립%' OR

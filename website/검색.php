@@ -1,17 +1,15 @@
 <?php
-	$conn = mysqli_connect(
-  		'localhost', 
-  		'root',
-		'',
-  		'flower');
-		  $search = $_GET['q'];
+	require_once("연동.php")
+?>
+<?php
+		$search = $_GET['q'];
 
-		  $sql = "SELECT * 
-		  FROM flower.flower_db
-		  WHERE 꽃말 LIKE '%$search%' OR	
-		  		꽃이름 LIKE '%$search%' ORDER BY 월일 ASC";
-		  
-		  $result = mysqli_query($conn, $sql);
+			$sql = "SELECT * 
+			FROM flower.flower_db
+			WHERE 꽃말 LIKE '%$search%' OR	
+					꽃이름 LIKE '%$search%' ORDER BY 월일 ASC";
+			
+			$result = mysqli_query($conn, $sql);
 ?>
 
 
@@ -21,7 +19,7 @@
 		<title>검색어와 관련된 꽃</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main2.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
 
 		<style>
 		.thumbnails h3 {
